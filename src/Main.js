@@ -1,16 +1,19 @@
 import React from 'react';
 import Hornedbeast from './Hornedbeast';
+import data from './data.json';
+import './Main.css'
+
 
 class Main extends React.Component {
   render(){
     return (
-    <>
-    <h2>Horned Beast Gallery</h2>
-
-    <Hornedbeast title="Goat" imgUrl="https://images.unsplash.com/photo-1604076150017-48b528308aa3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z29hdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" description="This is a goat on a roof"/>
+      <main>
+     
+      {data.map((hb,index) => {
+        return <Hornedbeast image_url={hb.image_url} title={hb.title} description={hb.description} key={index}/>
+      })}
     
-    <Hornedbeast title="Rhino" imgUrl="https://images.unsplash.com/photo-1598894000396-bc30e0996899?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmhpbm98ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" description="This is a Rhino in the wild"/>
-    </>
+    </main>
     )
   }
 }
