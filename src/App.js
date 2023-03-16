@@ -5,17 +5,54 @@ import React from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+import SelectedBeast from './SelectedBeast';
+import data from './data.json'
+import './App.css'
 
 
 
 // 2ND CREATE THE CLASS - will always have a render method
 
 class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      showModal: false,
+      selectedBeastImg:'',
+      selectedBeastDescription: ''
+    }
+  }
+
+  // MODAL METHOD TO CLOSE THE MODAL
+  handleCloseModal = () => {
+    this.setState({
+      showModal: false
+    })
+  }
+
+  handleOpenModal = (img, description) => {
+    this.setState({
+      showModal: true,
+      selectedBeastImg: img,
+      selectedBeastDescription: description
+    })
+  }
+
+// THIS GOES TO SELECTED BEAST
+
   render(){
     return (
     <>
     <Header />
-    <Main />
+    <Main 
+    handleOpenModal={this.handleOpenModal}/>
+    <SelectedBeast 
+    showModal={this.state.showModal}
+    handleCloseModal={this.handleCloseModal}
+    selectedBeastDescription={this.state.selectedBeastDescription}
+    selectedBeastImg={this.state.selectedBeastImg}
+    />
+   
     <Footer />
     </>
     )

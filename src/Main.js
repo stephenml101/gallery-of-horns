@@ -5,15 +5,21 @@ import './Main.css'
 
 
 class Main extends React.Component {
-  render(){
+  render() {
     return (
       <main>
-     
-      {data.map((hb,index) => {
-        return <Hornedbeast image_url={hb.image_url} title={hb.title} description={hb.description} key={index}/>
-      })}
-    
-    </main>
+
+        {data.map((hb, index) => {
+          return <Hornedbeast
+            image_url={hb.image_url}
+            title={hb.title}
+            description={hb.description}
+            key={index} 
+            handleOpenModal={this.props.handleOpenModal}
+            />
+        })}
+
+      </main>
     )
   }
 }
