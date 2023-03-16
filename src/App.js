@@ -45,7 +45,9 @@ class App extends React.Component {
     <>
     <Header />
     <Main 
-    handleOpenModal={this.handleOpenModal}/>
+    handleOpenModal={this.handleOpenModal}
+    data = {data}
+    />
     <SelectedBeast 
     showModal={this.state.showModal}
     handleCloseModal={this.handleCloseModal}

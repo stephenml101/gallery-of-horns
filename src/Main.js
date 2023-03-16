@@ -1,6 +1,5 @@
 import React from 'react';
 import Hornedbeast from './Hornedbeast';
-import data from './data.json';
 import './Main.css'
 
 
@@ -9,7 +8,7 @@ class Main extends React.Component {
     return (
       <main>
 
-        {data.map((hb, index) => {
+        {this.props.data.map((hb, index) => {
           return <Hornedbeast
             image_url={hb.image_url}
             title={hb.title}
