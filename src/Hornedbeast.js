@@ -19,10 +19,15 @@ handleLikes = () => {
 })
 }
 
+handleBeastClick = () => {
+  this.props.handleOpenModal(this.props.image_url, this.props.description)
+}
+
+
   render(){
     return (
 <Card style={{ width: '24rem' }}>
-      <Card.Img variant="top" src={this.props.image_url} alt={this.props.description}/>
+      <Card.Img onClick={this.handleBeastClick} variant="top" src={this.props.image_url} alt={this.props.description}/>
       <Card.Body>
         <Card.Title>{this.props.title}</Card.Title>
         <Card.Text>

@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# March 14th, 2023
+
+- Today the lab took me about an hour and a half. I started working at 3:30pm and didn't finish until 5pm. 
+
+## March 15th, 2023
+
+ Number and name of feature: Display a Modal 
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 3pm
+
+Finish time: 5:15pm
+
+Actual time needed to complete: 2 hours and 15 minutes
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -70,6 +86,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-## March 14th, 2023
-
-- Today the lab took me about an hour and a half. I started working at 3:30pm and didn't finish until 5pm. 
